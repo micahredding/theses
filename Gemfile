@@ -34,21 +34,21 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'dotenv-rails'
-gem 'pry'
-gem 'sprockets_better_errors'
+# gem 'dotenv-rails'
+# gem 'pry'
+# gem 'sprockets_better_errors'
 gem 'devise'
 gem 'rails_admin'
-gem 'cancancan'
-gem 'paper_trail'
-gem 'gibbon'
-gem 'simplemde-rails'
-gem 'redcarpet'
-gem 'cloudinary'
-gem 'carrierwave'
+# gem 'cancancan'
+# gem 'paper_trail'
+# gem 'gibbon'
+# gem 'simplemde-rails'
+# gem 'redcarpet'
+# gem 'cloudinary'
+# gem 'carrierwave'
 gem 'rails_layout'
 gem 'bootstrap-sass'
-gem 'twitter-typeahead-rails'
+# gem 'twitter-typeahead-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
