@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+  <section>
+    <% @posts.each do |post| %>
+      <article>
+        <div><%= post.body %></div>
+        <div><%= link_to post.url, post.name %></div>
+        <div><%= post.email %></div>
+        <div>
+          <span><%= link_to 'Show', post %></span>
+          <span><%= link_to 'Edit', edit_post_path(post) %></span>
+          <span><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        </div>
+      </article>
+    <% end %>
+
+    <article>
+      <%= link_to 'New Post', new_post_path %>
+    </article>
+
+  </section>
