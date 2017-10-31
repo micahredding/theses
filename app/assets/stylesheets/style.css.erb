@@ -41,9 +41,9 @@ p:first-of-type:first-letter {
 
 /* Section - Parallax */
 /**************************/
-.parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(basilica.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-.parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(renewal.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-.parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(red-doors.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+.parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url('<%= asset_path('basilica.jpg') %>'); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+.parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url('<%= asset_path('renewal.jpg') %>'); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+.parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url('<%= asset_path('red-doors.jpg') %>'); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 
 /* Extras */
 /**************************/
@@ -66,7 +66,7 @@ p:first-of-type:first-letter {
 
 
 body.door {
-	background-image: url(bg-door.jpg);
+	background-image: url('<%= asset_path('bg-door.jpg') %>');
 	background-size: auto;
 	padding: 1rem;
 	padding-top: 4rem;
@@ -85,7 +85,7 @@ body.door > article {
 	background-color: whitesmoke;
 	padding: 3rem;
 	padding-top: 4.5rem;
-	background-image: url(nail.png);
+	background-image: url('<%= asset_path('nail.png') %>');
 	background-position: top center;
 	background-size: auto;
 	background-repeat: no-repeat;
