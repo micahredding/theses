@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= content_for?(:title) ? yield(:title) : "Theses" %></title>
-  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Theses" %>">
+  <title><%= content_for?(:title) ? yield(:title) : "Nail Your Theses!" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Nail Your Theses!" %>">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <%= csrf_meta_tags %>
@@ -12,7 +12,7 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Nail Your Theses!" />
   <meta property="og:description"   content="<%= @post.body %>" />
-  <meta property="og:image"         content="<%= asset_path('nail-your-theses.jpg') %>" />
+  <meta property="og:image"         content="http://www.nail-your-theses.com/<%= asset_path('nail-your-theses.jpg') %>" />
 
 </head>
 <body class="door">
