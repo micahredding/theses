@@ -176,7 +176,9 @@ hr {
 }
 
 input,
-select {
+select,
+form,
+textarea {
 	vertical-align: middle;
 	font: inherit;
 }
