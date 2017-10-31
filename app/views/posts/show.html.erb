@@ -1,12 +1,34 @@
-<p id="notice"><%= notice %></p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Theses" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Theses" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= csrf_meta_tags %>
 
-<div>
-  <%= @post.body %>
-</div>
 
-<div>
-  <strong><%= link_to @post.url, @post.name %></strong>
-</div>
+  <meta property="og:url"           content="<%= post_url(@post) %>" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Nail Your Theses" />
+  <meta property="og:description"   content="<%= @post.body %>" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</head>
+<body class="door">
+
+  <p id="notice"><%= notice %></p>
+
+  <article>
+    <p class="content">
+      <%= @post.body %>
+    </p>
+
+    <p class="author">
+      <strong><%= link_to @post.url, @post.name %></strong>
+    </p>
+  </article>
+
+</body>
+</html>
