@@ -6,13 +6,13 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order(updated_at: :desc)
     @post = Post.new
-    render layout: false
+    render layout: "door"
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    render layout: false
+    render layout: "door"
   end
 
   # GET /posts/new

@@ -1,54 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= content_for?(:title) ? yield(:title) : "Nail Your Theses!" %></title>
-  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Nail Your Theses!" %>">
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Nail Your Theses!" />
-  <meta property="og:description"   content="500 years ago, Martin Luther nailed 95 theses to the door of a German church, kicking off the Protestant Reformation. What are your theses? What do you have to say to the contemporary world?" />
-  <meta property="og:image"         content="http://www.nail-your-theses.com<%= asset_path('nail-your-theses.jpg') %>" />
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="door">
+<h1>Nail Your Theses!</h1>
 
-	<p id="notice"><%= notice %></p>
+<article>
+  <%= render 'form', post: @post %>
+</article>
 
-	<h1>Nail Your Theses!</h1>
-
-  <article>
-    <%= render 'form', post: @post %>
-  </article>
-
-  <% @posts.each do |post| %>
-		<article>
-	    <p class="content"><%= post.body %></p>
-	    <p class="author">— <%= link_to post.name, post.url %></p>
-
-      <div class="fb-share-button" data-href="<%= post_url(post) %>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= post_url(post) %>">Share</a></div>      
-
-		</article>
-	<% end %>
-
-
-<br /><br /><br /><br /><br />
-
-
-<p style="text-align:center; color:white; font-size: 2rem;">A project of <a href="http://micahredding.com">Micah Redding</a> and John Mark. See why <strong><a href="http://micahredding.com/blog/christian-transhumanism-is-the-next-reformation">Christian Transhumanism is the Next Reformation</a></strong>.</p>
-
-<br /><br /><br /><br /><br />
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1946807255535850';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-</body>
-</html>
+<% @posts.each do |post| %>
+  <%= render :partial => 'post', :locals => {:post => post} %>
+<% end %>
