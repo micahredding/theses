@@ -1,22 +1,29 @@
-<p id="notice"><%= notice %></p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Theses" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Theses" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="door">
 
-<h1>Posts</h1>
-  <section>
-    <% @posts.each do |post| %>
-      <article>
-        <div><%= post.body %></div>
-        <div><%= link_to post.url, post.name %></div>
-        <div><%= post.email %></div>
-        <div>
-          <span><%= link_to 'Show', post %></span>
-          <span><%= link_to 'Edit', edit_post_path(post) %></span>
-          <span><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        </div>
-      </article>
-    <% end %>
+	<p id="notice"><%= notice %></p>
 
-    <article>
-      <%= link_to 'New Post', new_post_path %>
-    </article>
+	<h1>Nail It Up</h1>
+  <% @posts.each do |post| %>
+		<article>
+	    <div><%= post.body %></div>
+	    <div><%= link_to post.url, post.name %></div>
+	    <div><%= post.email %></div>
+		</article>
+	<% end %>
 
-  </section>
+  <article>
+    <%= link_to 'New Post', new_post_path %>
+  </article>
+
+</body>
+</html>
