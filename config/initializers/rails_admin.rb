@@ -19,6 +19,10 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  config.authorize_with do
+    redirect_to main_app.root_path unless current_user.id == 1
+  end
+
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
