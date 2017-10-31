@@ -15,8 +15,8 @@
 	<h1>Nail It Up</h1>
   <% @posts.each do |post| %>
 		<article>
-	    <div class="content"><%= post.body %></div>
-	    <div class="author">— <%= link_to post.name, post.url %></div>
+	    <p class="content"><%= post.body %></p>
+	    <p class="author">— <%= link_to post.name, post.url %></p>
 		</article>
 	<% end %>
 

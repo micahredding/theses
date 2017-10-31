@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_area :body, placeholder: "Your thesis", style: "width: 100%", rows: 3 %>
+    <%= f.text_area :body, placeholder: "Your thesis", style: "width: 100%", rows: 3, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :name, placeholder: "Name", required: true %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email, placeholder: "Email" %>
+    <%= f.text_field :email, placeholder: "Email", type:'email', required: true %>
   </div>
 
   <div class="field">
