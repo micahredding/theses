@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017033751) do
+ActiveRecord::Schema.define(version: 20171031211227) do
 
   create_table "posts", force: :cascade do |t|
     t.text     "body"
     t.string   "name"
     t.string   "email"
     t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "hidden",     default: false
   end
 
   create_table "users", force: :cascade do |t|
