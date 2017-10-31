@@ -12,7 +12,7 @@
 
 	<p id="notice"><%= notice %></p>
 
-	<h1>Nail It Up</h1>
+	<h1>Nail Your Theses</h1>
 
   <article>
     <%= render 'form', post: @post %>
@@ -23,24 +23,28 @@
 	    <p class="content"><%= post.body %></p>
 	    <p class="author">— <%= link_to post.name, post.url %></p>
 
-      <!-- Your like button code -->
-      <div class="fb-like" 
-        data-href="<%= post_url(post) %>" 
-        data-layout="standard" 
-        data-action="like" 
-        data-show-faces="true">
-      </div>
+      <div class="fb-share-button" data-href="<%= post_url(post) %>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= post_url(post) %>">Share</a></div>      
 
 		</article>
 	<% end %>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=240980012606497';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+
+<br /><br /><br /><br /><br />
+
+
+<p style="text-align:center; color:white; font-size: 2rem;">A project of <a href="http://micahredding.com">Micah Redding</a>. See why <strong><a href="http://micahredding.com/blog/christian-transhumanism-is-the-next-reformation">Christian Transhumanism is the Next Reformation</a></strong>.</p>
+
+<br /><br /><br /><br /><br />
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1946807255535850';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 </html>
