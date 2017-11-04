@@ -9,9 +9,6 @@ h1,h2,h3 {
 }
 
 #main {width: 100%; padding:0;}
-.content-asset p {margin:0 auto;}
-.breadcrumb {display:none;}
-
 
 /* Typography */
 /**************************/
@@ -36,7 +33,6 @@ p:first-of-type:first-letter {
 /* Section - Block */
 /**************************/
 .block {background: white; padding: 60px; width:820px; margin:0 auto;}
-.block-gray {background: #f2f2f2;padding: 60px;}
 .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
 
 /* Section - Parallax */
@@ -79,9 +75,6 @@ body.door h1 {
 	margin-bottom: 4rem;
 	text-shadow: -2px 2px 5px #000;
 }
-body.door h1 a {
-	color:whitesmoke;
-}
 body.door > article {
 	border-radius: 3px;
 	box-shadow: -5px 5px 10px 2px #000;
@@ -103,44 +96,24 @@ body.door > article .author {
 p + p {
 	margin-top: 1rem;
 }
-
-form, form input, form textarea {
-	font-size: 1rem;
-}
-form .field {
-	display: block;
-}
-form input {
-	display: block;
-	margin: 0.25rem 0;
-	padding: 0.5rem;
+input, textarea {
+	vertical-align: baseline;
+	border: 0;
+	border-radius: 3px;
+	padding: .25rem;
+	padding-left: 0;
 	width: 100%;
 }
-form textarea {
+input[type="submit"] {
+	width: 100%;
+	border: 0;
+	background-color: #04dd76;
 	padding: 1rem;
 }
-form input[type="submit"] {
-  background-color: #3569AE;
-  border: none;
-  color: white;
-  margin: 0.5rem 0;
+label {
+	display: block;
+	margin-bottom: .25rem;
 }
-form input[type="submit"]:hover {
-  background-color: #000; /* Green */
-}
-form #post_name {
-	display: inline-block;
-	width: 50%;
-}
-form #post_email {
-	display: inline-block;
-	width: 49%;
-}
-
-a {
-	color: white;
-}
-
-article a {
-	color: #111;
+div.field {
+	margin-bottom: 1rem;
 }
