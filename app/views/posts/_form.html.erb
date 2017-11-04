@@ -16,21 +16,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "Name", required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %>
+    <%= f.text_field :name, placeholder: "Your Name", required: true %>
     <%= f.text_field :email, placeholder: "Email", type:'email', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :url %>
     <%= f.text_field :url, placeholder: "http://www.YourWebsite.com" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Nail it!" %>
   </div>
 <% end %>
